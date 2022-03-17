@@ -62,7 +62,7 @@ namespace MovieShopAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetTopRatedMovies()
         {
-            var topRatedMovie = await _movieService.GetTop30RatingMovies(); //Working? (Required testing)
+            var topRatedMovie = await _movieService.GetTop30RatingMovies();//
 
             if (topRatedMovie == null)
             {
@@ -101,7 +101,7 @@ namespace MovieShopAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetMovieReviews(int id, int pageSize = 30, int pageNumber = 1)
         {
-            var movieGenre = await _movieService.GetMovieDetails(id); //!!!need to create this method
+            var movieGenre = await _movieService.GetMovieReviews(id, pageSize, pageNumber);
 
             if (movieGenre == null)
             {

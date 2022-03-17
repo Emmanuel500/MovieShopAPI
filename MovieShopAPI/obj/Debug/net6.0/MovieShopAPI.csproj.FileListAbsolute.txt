@@ -63,3 +63,4 @@ C:\Users\Eph96\Documents\Job\Antra\Homework\MovieShopAPI\MovieShopAPI\obj\Debug\
 C:\Users\Eph96\Documents\Job\Antra\Homework\MovieShopAPI\MovieShopAPI\obj\Debug\net6.0\ref\MovieShopAPI.dll
 C:\Users\Eph96\Documents\Job\Antra\Homework\MovieShopAPI\MovieShopAPI\obj\Debug\net6.0\MovieShopAPI.pdb
 C:\Users\Eph96\Documents\Job\Antra\Homework\MovieShopAPI\MovieShopAPI\obj\Debug\net6.0\MovieShopAPI.genruntimeconfig.cache
+C:\Users\Eph96\Documents\Job\Antra\Homework\MovieShopAPI\MovieShopAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

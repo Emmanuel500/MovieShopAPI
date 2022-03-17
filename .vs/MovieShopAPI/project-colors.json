@@ -15,7 +15,47 @@
       "ProjectGuid": "9d899fd1-df96-4ed2-a306-9e10afc59777",
       "DisplayName": "Infrastructure",
       "ColorIndex": 2
+    },
+    "883a88c7-941d-4057-9215-9255fcfebade": {
+      "ProjectGuid": "883a88c7-941d-4057-9215-9255fcfebade",
+      "DisplayName": "Infrastructure",
+      "ColorIndex": 3
+    },
+    "2bc5f38e-a6a0-4a89-acc9-58381729f1f3": {
+      "ProjectGuid": "2bc5f38e-a6a0-4a89-acc9-58381729f1f3",
+      "DisplayName": "ApplicationCore",
+      "ColorIndex": 4
+    },
+    "73386ce5-595b-406e-a8cd-a8882273d8ba": {
+      "ProjectGuid": "73386ce5-595b-406e-a8cd-a8882273d8ba",
+      "DisplayName": "Infrastructure",
+      "ColorIndex": 5
+    },
+    "6d4014c0-3ff1-4544-8516-d6bfd3112fa5": {
+      "ProjectGuid": "6d4014c0-3ff1-4544-8516-d6bfd3112fa5",
+      "DisplayName": "ApplicationCore",
+      "ColorIndex": 6
+    },
+    "652831d9-1915-437b-ba59-f4714f3886e1": {
+      "ProjectGuid": "652831d9-1915-437b-ba59-f4714f3886e1",
+      "DisplayName": "ApplicationCore",
+      "ColorIndex": 7
+    },
+    "aad2b121-8a98-492d-996e-e5c9e0e60f84": {
+      "ProjectGuid": "aad2b121-8a98-492d-996e-e5c9e0e60f84",
+      "DisplayName": "Infrastructure",
+      "ColorIndex": 8
+    },
+    "645e3109-449b-4670-958f-abbe29b3faa5": {
+      "ProjectGuid": "645e3109-449b-4670-958f-abbe29b3faa5",
+      "DisplayName": "Infrastructure",
+      "ColorIndex": 9
+    },
+    "cca2f25f-a50e-4e6c-8d87-405e000bfe34": {
+      "ProjectGuid": "cca2f25f-a50e-4e6c-8d87-405e000bfe34",
+      "DisplayName": "ApplicationCore",
+      "ColorIndex": 10
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 11
 }
