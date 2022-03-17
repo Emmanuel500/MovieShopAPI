@@ -20,6 +20,8 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICurrentUser, CurrentUser>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IGenreService, GenreService>();
+builder.Services.AddScoped<IGenreRepository, GenreRepository>();
 
 //
 builder.Services.AddHttpContextAccessor();
@@ -49,6 +51,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -2,6 +2,10 @@
 using ApplicationCore.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace MovieShopAPI.Controllers
 {
@@ -10,10 +14,12 @@ namespace MovieShopAPI.Controllers
     public class AccountController : ControllerBase
     {
         private IAccountService _accountService;
+        private IConfiguration _configuration;
 
-        public AccountController(IAccountService accountService)
+        public AccountController(IAccountService accountService, IConfiguration configuration)
         {
             _accountService = accountService;
+            _configuration = configuration;
         }
 
         [HttpPost]
@@ -28,6 +34,79 @@ namespace MovieShopAPI.Controllers
             var user = await _accountService.CreateUser(model);
             if (user == null) return BadRequest();
             return Ok(user);
+        }
+
+        //Go to Account setting and mdify roles~
+
+        // Use Postman for better testing and saving test
+        // Isomia also
+        [HttpPost]
+        [Route("login")]
+        public async Task<IActionResult> Login(LoginModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                // 400 Bad request
+                return BadRequest();
+            }
+            //Check email/password
+            var user = await _accountService.ValidateUser(model.Email, model.Password);
+            if (user == null)
+            {
+                return Unauthorized(new { error = "please verify email/password" });
+            }
+
+            // we need to create the JWT using the claims info and secret key
+
+            var token = GenerateToken(user);
+            return Ok( new { token = token });
+        }
+
+        //Azure Key Vault: Place to store valuable secrets.~
+
+        private string GenerateToken(LoginResponseModel user)
+        {
+            //create claims
+            var claims = new List<Claim>
+            {
+                //copy-paste claims~
+                new Claim( ClaimTypes.NameIdentifier, user.Id.ToString() ),
+                new Claim(JwtRegisteredClaimNames.GivenName, user.FirstName ),
+                new Claim(JwtRegisteredClaimNames.FamilyName, user.LastName ),
+                new Claim(JwtRegisteredClaimNames.Birthdate, user.DateOfBirth.ToShortDateString() ),
+                new Claim(JwtRegisteredClaimNames.Email, user.Email ),
+                new("Language", "en")
+            };
+
+            //add roles to claim
+            claims.AddRange(user.Roles.Select(role => new Claim(ClaimTypes.Role, role.Name)));
+
+            var identityClaims = new ClaimsIdentity();
+            identityClaims.AddClaims(claims);
+
+            // Using info from appsettings (configuration)~
+            // Create the token with a secret signature
+            // Expiration time
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["SecretKey"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
+
+            var expirationTime = DateTime.UtcNow.AddHours(_configuration.GetValue<int>("ExpirationHours"));
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+
+            // decribe the contents of the token
+
+            var token = new SecurityTokenDescriptor
+            {
+                Subject = identityClaims,
+                Expires = expirationTime,
+                SigningCredentials = credentials,
+                Issuer = _configuration["Issuer"],
+                Audience = _configuration["Audience"]
+            };
+
+            var encodedJWT = tokenHandler.CreateToken(token);
+            return tokenHandler.WriteToken(encodedJWT);
         }
     }
 }

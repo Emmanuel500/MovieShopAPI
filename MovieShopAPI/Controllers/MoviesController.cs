@@ -21,9 +21,9 @@ namespace MovieShopAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllMovie(int id, int pageSize = 30, int pageNumber = 1)
+        public async Task<IActionResult> GetAllMovie(int pageSize = 30, int pageNumber = 1)
         {
-            var allMovie = await _movieService.GetMoviesByGenrePagination(id, pageSize, pageNumber); //Make the correct name for this
+            var allMovie = await _movieService.GetAllMoviesPagination(pageSize, pageNumber);
 
             if (allMovie == null)
             {
@@ -62,7 +62,7 @@ namespace MovieShopAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetTopRatedMovies()
         {
-            var topRatedMovie = await _movieService.GetTop30GrossingMovies(); //!!!need to create this method
+            var topRatedMovie = await _movieService.GetTop30RatingMovies(); //Working? (Required testing)
 
             if (topRatedMovie == null)
             {
@@ -86,9 +86,9 @@ namespace MovieShopAPI.Controllers
 
         [Route("genre/{genreId:int}")]
         [HttpGet]
-        public async Task<IActionResult> GetMovieGenre(int id, int pageSize = 30, int pageNumber = 1)
+        public async Task<IActionResult> GetMovieGenre(int genreId, int pageSize = 30, int pageNumber = 1)
         {
-            var movieGenre = await _movieService.GetMoviesByGenrePagination(id, pageSize, pageNumber); //!!!Make the correct function for this
+            var movieGenre = await _movieService.GetMoviesByGenrePagination(genreId, pageSize, pageNumber);
 
             if (movieGenre == null)
             {
