@@ -2049,13 +2049,13 @@
     },
     "ApplicationCore/1.0.0": {
       "type": "project",
-      "path": "../../MovieShop/ApplicationCore/ApplicationCore.csproj",
-      "msbuildProject": "../../MovieShop/ApplicationCore/ApplicationCore.csproj"
+      "path": "../ApplicationCore/ApplicationCore.csproj",
+      "msbuildProject": "../ApplicationCore/ApplicationCore.csproj"
     },
     "Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../../MovieShop/Infrastructure/Infrastructure.csproj",
-      "msbuildProject": "../../MovieShop/Infrastructure/Infrastructure.csproj"
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2098,11 +2098,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Eph96\\Documents\\Job\\Antra\\Homework\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {
-              "projectPath": "C:\\Users\\Eph96\\Documents\\Job\\Antra\\Homework\\MovieShop\\ApplicationCore\\ApplicationCore.csproj"
+            "C:\\Users\\Eph96\\Documents\\Job\\Antra\\Homework\\MovieShopAPI\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "C:\\Users\\Eph96\\Documents\\Job\\Antra\\Homework\\MovieShopAPI\\ApplicationCore\\ApplicationCore.csproj"
             },
-            "C:\\Users\\Eph96\\Documents\\Job\\Antra\\Homework\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Eph96\\Documents\\Job\\Antra\\Homework\\MovieShop\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\Eph96\\Documents\\Job\\Antra\\Homework\\MovieShopAPI\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Eph96\\Documents\\Job\\Antra\\Homework\\MovieShopAPI\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

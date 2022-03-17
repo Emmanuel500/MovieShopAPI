@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+FKqAHel46g9z49wECxLDSqL4BGzcL8DBsW8pG4F7Exqk0LrhwtOwyWXbSLiU2SREJMUMDbGjH2GtBfY32jJ2g==",
+  "dgSpecHash": "6c918ZDq2TvqiFde5UmDzrYiCPwz6921cIxSiI3Y+a9vOQ94tFbCAL9/v95mSHaCWtjp22xxOmvUCT/4Zi850Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eph96\\Documents\\Job\\Antra\\Homework\\MovieShop\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Eph96\\Documents\\Job\\Antra\\Homework\\MovieShopAPI\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eph96\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.3\\microsoft.aspnetcore.cryptography.internal.6.0.3.nupkg.sha512",
     "C:\\Users\\Eph96\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.3\\microsoft.aspnetcore.cryptography.keyderivation.6.0.3.nupkg.sha512",

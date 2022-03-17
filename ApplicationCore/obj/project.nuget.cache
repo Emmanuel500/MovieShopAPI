@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2ApGc5Yj6eEnt0TQ5na8kE9qoDt3D3feRK0/rdbs7KZkXIUTvcyx7OU3/u/IB1h5AQQZGbbRO7B6ZUUDfQC1DA==",
+  "dgSpecHash": "SbT5lxEqod0/rSqsGUKPTz6zYIidwnlfAI0l91He9T2xQKQbxgQ94cko/qHSEffOt5A70qVVJ5yAWh5wyevUJQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eph96\\Documents\\Job\\Antra\\Homework\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
+  "projectFilePath": "C:\\Users\\Eph96\\Documents\\Job\\Antra\\Homework\\MovieShopAPI\\ApplicationCore\\ApplicationCore.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
