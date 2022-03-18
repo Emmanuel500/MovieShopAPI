@@ -60,6 +60,12 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
+// cors middleware
+app.UseCors(policyBuilder =>
+{
+    policyBuilder.WithOrigins(app.Configuration.GetValue<string>("clientUrl")).AllowCredentials().AllowAnyMethod()
+                 .AllowAnyHeader();
+});
 
 app.UseHttpsRedirection();
 
