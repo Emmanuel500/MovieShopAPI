@@ -75,7 +75,22 @@
       "ProjectGuid": "4147132f-99bc-43cd-83f7-04b05a46f4ac",
       "DisplayName": "ApplicationCore",
       "ColorIndex": 14
+    },
+    "4b251311-cab9-4e05-96c9-479bbf7a59fa": {
+      "ProjectGuid": "4b251311-cab9-4e05-96c9-479bbf7a59fa",
+      "DisplayName": "ApplicationCore",
+      "ColorIndex": 15
+    },
+    "cee50d25-173d-41b0-b762-c51b11bf16e3": {
+      "ProjectGuid": "cee50d25-173d-41b0-b762-c51b11bf16e3",
+      "DisplayName": "ApplicationCore",
+      "ColorIndex": 0
+    },
+    "40ceb115-721a-485d-8b5e-9522538b01cf": {
+      "ProjectGuid": "40ceb115-721a-485d-8b5e-9522538b01cf",
+      "DisplayName": "Infrastructure",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 15
+  "NextColorIndex": 2
 }

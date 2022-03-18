@@ -36,6 +36,19 @@ namespace MovieShopAPI.Controllers
             return Ok(user);
         }
 
+        [HttpGet]
+        [Route("check-email")]
+        public async Task<IActionResult> CheckEmail(string email)
+        {
+            if (!ModelState.IsValid)
+            {
+                // 400 Bad request
+                return BadRequest();
+            }
+            var exist = await _accountService.CheckEmail(email);
+            return Ok(exist);
+        }
+
         //Go to Account setting and mdify roles~
 
         // Use Postman for better testing and saving test
