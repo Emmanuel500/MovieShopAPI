@@ -90,7 +90,22 @@
       "ProjectGuid": "40ceb115-721a-485d-8b5e-9522538b01cf",
       "DisplayName": "Infrastructure",
       "ColorIndex": 1
+    },
+    "c12d1851-b0fa-49b5-8b84-c52f60b8a667": {
+      "ProjectGuid": "c12d1851-b0fa-49b5-8b84-c52f60b8a667",
+      "DisplayName": "Infrastructure",
+      "ColorIndex": 2
+    },
+    "df13cc10-3462-4284-90e9-2ff4acf5aeb3": {
+      "ProjectGuid": "df13cc10-3462-4284-90e9-2ff4acf5aeb3",
+      "DisplayName": "Infrastructure",
+      "ColorIndex": 3
+    },
+    "45f17edc-af5a-44ef-9f2d-05c7e1804395": {
+      "ProjectGuid": "45f17edc-af5a-44ef-9f2d-05c7e1804395",
+      "DisplayName": "ApplicationCore",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 5
 }

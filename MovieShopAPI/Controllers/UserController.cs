@@ -23,9 +23,11 @@ namespace MovieShopAPI.Controllers
 
         [HttpGet]
         [Route("details")]
-        public async Task<IActionResult> Details()
+        public async Task<IActionResult> GetUserDetails(int userId)
         {
-            return Ok();
+            var userDetails = await _userService.GetUserDetails(userId);
+            if (userDetails == null) return BadRequest();
+            return Ok(userDetails);
         }
 
         [HttpPost]

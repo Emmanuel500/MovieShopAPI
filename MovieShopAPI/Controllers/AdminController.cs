@@ -17,5 +17,19 @@ namespace MovieShopAPI.Controllers
         {
             return Ok();
         }
+
+        [HttpPut]
+        [Route("movie")]
+        public async Task<IActionResult> UpdateMovie()
+        {
+            return Ok();
+        }
+
+        [HttpGet]
+        [Route("top-purchased-movies")]
+        public async Task<IActionResult> TopPurchasedMovies()
+        {
+            return Ok();
+        }
     }
 }
