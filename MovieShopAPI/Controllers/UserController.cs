@@ -89,6 +89,22 @@ namespace MovieShopAPI.Controllers
             return Ok(favorExist);
         }
 
+        [HttpGet]
+        [Route("get-review-details/{movieId:int}")]
+        public async Task<IActionResult> GetReview(int movieId, int userId)
+        {
+            var reviewDetails = new ReviewRequestModel();
+            try
+            {
+                reviewDetails = await _userService.GetReviewDetails(userId, movieId);
+            }
+            catch (Exception ex)
+            {
+                BadRequest(ex);
+            }
+            return Ok(reviewDetails);
+        }
+
         [HttpPost]
         [Route("add-review")]
         public async Task<IActionResult> AddReview(int movieId, int userId, decimal rating, string reviewText)

@@ -120,7 +120,17 @@
       "ProjectGuid": "b13eaaf7-dcb2-4e1c-8feb-6dc0ddb6d148",
       "DisplayName": "Infrastructure",
       "ColorIndex": 7
+    },
+    "4fbe7ca7-b395-4483-acb9-07243cc69b34": {
+      "ProjectGuid": "4fbe7ca7-b395-4483-acb9-07243cc69b34",
+      "DisplayName": "Infrastructure",
+      "ColorIndex": 8
+    },
+    "cc767c7b-4ecd-4910-a5e1-5eadb09ea055": {
+      "ProjectGuid": "cc767c7b-4ecd-4910-a5e1-5eadb09ea055",
+      "DisplayName": "ApplicationCore",
+      "ColorIndex": 9
     }
   },
-  "NextColorIndex": 8
+  "NextColorIndex": 10
 }
