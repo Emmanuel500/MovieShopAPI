@@ -51,12 +51,12 @@ namespace MovieShopAPI.Controllers
         [Route("favorite")]
         public async Task<IActionResult> Favorite(int movieId, int userId)
         {
-            var favToRemove = new FavoriteRequestModel
+            var favToAdd = new FavoriteRequestModel
             {
                 MovieId = movieId,
                 UserId = userId
             };
-            var favorite = await _userService.AddFavorite(favToRemove);
+            var favorite = await _userService.AddFavorite(favToAdd);
             if (favorite == null) return BadRequest();
             return Ok(favorite);
         }
@@ -78,7 +78,7 @@ namespace MovieShopAPI.Controllers
             {
                 BadRequest(ex);
             }
-            return Ok("Review Deleted");
+            return Ok("Favorite remove");
         }
         
         [HttpGet]
